@@ -1,2 +1,38 @@
-# Space-Marine-Bolters
-A weapon enhancement mod for Helldivers 2, built for a Space Marine-inspired loadout.
+# 主宰 + 爆弹手枪
+
+一个包里含两个独立 Lua 模块，在管理器里作为**一个 mod 整体安装 / 卸载**。
+
+- **主宰（JAR-5）**：保留自身弹丸，重甲 AP4、小型撞击爆炸与拆毁 30，操控、弹容量、弹速和伤害增强
+- **爆弹手枪**：原版伤害与射速，保留操控和弹容量增强
+
+已实测的 0.1.2 主宰代码 + 0.1.1 爆弹手枪代码，本次仅重新分包，Lua 代码字节未变。
+
+## 依赖
+
+**只需要 Bingus Shared Loader v15 及以上**（或兼容的新版本）。
+
+无需其他前置，下载即用。
+
+## 安装
+
+把本包导入 Arsenal / HD2 Mod Manager，启用后部署，彻底退出游戏再重新启动。Loader 放到列表最后（若开启「首个 mod 优先」则放最前）。
+
+**不要与旧的主宰、爆弹手枪单独包重复启用。**
+
+## 版本与适配
+
+- 适配游戏构建 **25327279**。
+- 运行时受保护写入与回读已通过，用户已实测确认主宰拆巢与电弧连射成功。
+
+## 日志
+
+本 release 含多个互斥版本，各自有独立日志：
+
+- `%LOCALAPPDATA%\CowboyBingus\Helldivers2\Logs\BoltPistolEnhanced.log`
+- `%LOCALAPPDATA%\CowboyBingus\Helldivers2\Logs\DominatorEnhanced.log`
+
+## 注意
+
+- 内存模组属**客户端运行时改动**：只在本次游戏会话内生效，退出游戏即恢复原状。
+- 联机表现可能与队友不一致，并存在**反作弊风险**。建议仅在知情固定队环境中使用。
+- 卸载：用管理器禁用本包并重新部署；手动安装需保持 `patch_N` 编号连续，**不要直接删除中间编号的文件**。
